@@ -54,7 +54,7 @@ const SignInView = ({ setView }) => {
       );
 
       console.log("User from backend:", response.data.user);
-
+      login(response.data.user);
       navigate("/dashboard");
     } catch (error) {
       console.error("Google login failed:", error);
